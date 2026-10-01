@@ -3,11 +3,11 @@ XR Intel — intelligent WebXR / spatial web experiments by Matthew Bannon (Xrin
 
 ## Blender skills MCP
 
-The Blender skill is an MCP server, not a Blender script. It serves the lesson files so an agent can follow them. It does not open Blender or write a `.blend`.
+The Blender skill is an MCP server, not a Blender script and not a tutorial. It serves the procedure files so an agent can follow them. It does not open Blender or write a `.blend`.
 
 - Skill: [skills/blender-3d/SKILL.md](skills/blender-3d/SKILL.md)
 - Server: [skills/blender-3d/mcp/server.py](skills/blender-3d/mcp/server.py)
-- Tools: `blender_route`, `blender_doc`, `blender_project`, `blender_list`
+- Tools: `blender_route`, `blender_doc`, `blender_list`
 
 ```json
 {

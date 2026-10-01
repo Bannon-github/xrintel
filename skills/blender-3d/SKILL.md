@@ -1,19 +1,18 @@
 ---
 name: blender-3d
-description: "Run a first Blender session and export a WebXR-ready mesh. Use when teaching Blender, modeling a vase mug or low-poly prop, explaining edit mode modifiers materials or UVs, or preparing a glTF from Blender."
+description: "Run a first Blender session and export a WebXR-ready mesh. Use when teaching Blender, modeling a prop, explaining edit mode modifiers materials or UVs, or preparing a glTF from Blender."
 type: workflow
 lifecycle: active
 ---
 
 # Blender 3D — first asset
 
-Produce one mesh a WebXR scene can load. Menu names drift; if a command is missing, press F3 and search it. Do not paste video transcripts.
+Produce one mesh a WebXR scene can load. Menu names drift; if a command is missing, press F3 and search it. No tutorial walkthroughs.
 
 ## Knowledge graph
 
 Start at `references/INDEX.md` only if the task is not the workflow below.
 
-- Exercise named: `references/projects.md`
 - Shortcut asked: `references/hotkeys.md`
 - Texture, unwrap, black or smeared mesh: `references/materials-uvs.md`
 - Export or a huge glTF: `references/gltf-export.md`

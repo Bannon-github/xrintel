@@ -2,14 +2,9 @@
   "skill": "blender-3d",
   "test_cases": [
     {
-      "name": "vase_session",
-      "input": "Walk me through making a simple vase in Blender from scratch",
-      "assertions": ["Reads references/projects.md vase section", "Includes cylinder, loop cuts, subdivision, shade smooth, F12", "Does not paste a transcript"]
-    },
-    {
-      "name": "mug_modifiers",
-      "input": "How do I make the coffee mug from the Blender Guru donut part 1",
-      "assertions": ["Deletes the top face only", "Adds Solidify and Subdivision Surface without applying", "Uses Ctrl+R or inset on the rim"]
+      "name": "first_session",
+      "input": "Walk me through a first Blender prop for WebXR",
+      "assertions": ["Uses the skill workflow", "Includes edit mode, subdivision, material, and glTF export", "Does not cite a YouTube tutorial"]
     },
     {
       "name": "webxr_export",
@@ -23,7 +18,7 @@
     },
     {
       "name": "texture_uv",
-      "input": "The vase texture is smeared in the WebXR viewer",
+      "input": "The mesh texture is smeared in the WebXR viewer",
       "assertions": ["Reads references/materials-uvs.md", "Checks UV map and Smart UV Project or seams", "Says procedural nodes do not export"]
     }
   ]

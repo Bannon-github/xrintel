@@ -1,8 +1,6 @@
 # Changelog
 ## 2026-10-01
+- Removed tutorial notes, lesson stubs, and the project examples. The skill is procedure only.
 - Added `mcp/server.py`, a FastMCP server that serves the skill files. It does not run Blender.
 - Added `references/materials-uvs.md`: Principled BSDF, image textures, seams, Smart UV Project, and the glTF failure table.
 - Grew the skill graph: `references/INDEX.md`, `references/hotkeys.md`, `references/gltf-export.md`.
-- Pointed project steps at hotkeys and export instead of repeating them.
-- Trimmed overlapping lesson notes into this skill plus `references/projects.md`.
-- Initial skill. Three beginner lessons: Poole vase, Joey Carlino low-poly scene, Blender Guru donut part 1.

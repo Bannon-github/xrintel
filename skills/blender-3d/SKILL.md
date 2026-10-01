@@ -1,56 +1,42 @@
 ---
 name: blender-3d
-description: "Guide beginner Blender 3D modeling from the xrintel lesson files. Use when asked to teach Blender, model a vase mug or donut, explain edit mode modifiers navigation or rendering, or produce step-by-step Blender instructions."
+description: "Run a first Blender session and export a WebXR-ready mesh. Use when teaching Blender, modeling a vase mug or low-poly prop, explaining edit mode modifiers or rendering, or preparing a glTF from Blender."
 type: workflow
 lifecycle: active
 ---
 
-# Blender 3D — beginner instruction
+# Blender 3D — first asset
 
-Teach or execute a first Blender session from the three lesson files. Do not invent hotkeys. If a menu moved, say to press F3 and search the tool name.
+Produce one mesh a WebXR scene can load. Menu names drift; if a command is missing, press F3 and search it. Do not paste video transcripts.
 
-Lesson files (xrintel repo):
+Project-only steps: `references/projects.md`.
 
-- `research/youtube/steps/01-poole-absolute-beginners-vase.md` — vase, navigation, subsurf, material, render
-- `research/youtube/steps/02-joey-carlino-getting-started.md` — low-poly scene, F3, origin, units, camera
-- `research/youtube/steps/03-blender-guru-donut-part-1.md` — mug, solidify, loop cut, inset, versioned save
+## Workflow
 
-## Pick a lesson
-
-| Ask | File |
-|---|---|
-| First hour, vase, few shortcuts | Poole |
-| Low-poly scene, flower, tree, units for WebXR | Joey Carlino |
-| Donut series, mug, modifiers | Blender Guru part 1 |
-
-Read that file before answering. Quote steps, do not paste the video transcript.
-
-## Session order
-
-1. Confirm Blender is installed from blender.org. Version can be 4.x or 5.x for these tools.
-2. Navigation before modeling: middle-mouse orbit, scroll zoom, Shift+middle-mouse pan, Frame Selected.
-3. One primitive. Delete the default cube. Cylinder for vase or mug, torus for donut, cubes for the low-poly scene.
-4. Edit Mode only on a selected mesh. Name vertices, edges, faces once.
-5. Shape with move, scale, loop cut (Ctrl+R). Open a mug by deleting the top face only.
-6. Modifiers stay unapplied: Subdivision Surface, Solidify for thickness. Viewport level 1-2.
-7. Shade Smooth after subsurf. Loop cuts or inset near rims so subsurf does not melt edges. Avoid n-gons on those rims.
-8. One Principled material, Base Color only. Move the light. Frame the camera. F12.
-9. File → Save As with a trailing number (`name_01`). Numpad plus in the save dialog bumps it.
+1. Install from https://www.blender.org/download/ if Blender is not open. Dismiss the splash. Default scene is a cube, a light, and a camera.
+2. Navigate before modeling. Middle-mouse drag orbits, scroll zooms, Shift+middle-mouse pans. Top-right gizmos match those (axis, magnifying glass, hand). View → Frame Selected (numpad period) recovers a lost object. Walk mode: View → Navigation → Walk Navigation, or Shift+backtick; left-click keeps the view, right-click cancels.
+3. Delete the cube (X). Add a mesh with Shift+A. New objects spawn at the 3D cursor (Shift+right-click to place it).
+4. Tab into Edit Mode only with a mesh selected. Points are vertices, lines are edges, filled polygons are faces. 1/2/3 on the number row switch those modes. A selects all. Left-click confirms a transform, right-click cancels.
+5. Shape with G, R, S. Press X, Y, or Z after the key to lock an axis; Shift+axis excludes it. Ctrl+R adds a loop cut. I insets a face. Shift+D duplicates.
+6. Smooth without destroying the cage. Wrench tab → Subdivision Surface, viewport level 1 or 2. Right-click → Shade Smooth. Put loop cuts near any rim that must stay sharp. Do not Apply the modifier yet.
+7. One material (red sphere tab → New → Base Color). Move the light. Numpad 0 or View → Cameras → Active Camera. Lock Camera to View in the N-panel View tab to frame. F12 renders. Image → Save As.
+8. File → Save As with a trailing number (`prop_01`). Numpad plus in the save dialog bumps it. Do not overwrite the only copy.
+9. Export only after the checks below.
 
 ## WebXR export
 
-1. Scene units in metres.
-2. Apply scale (Ctrl+A → Scale) before glTF export. Do not apply subdivision unless the target needs the dense mesh; prefer a low cage plus a baked normal, or apply at render level 1.
-3. Outliner names become glTF node names.
-4. Lights and camera in the .blend are look-dev. Real-time XR relights the mesh.
+1. Scene properties → Units → metres.
+2. Object → Set Origin → Origin to Geometry if rotate spins around the world.
+3. Ctrl+A → Scale. Unapplied scale breaks modifiers and glTF.
+4. Rename the object in the outliner. That name is the glTF node.
+5. File → Export → glTF 2.0. Apply modifiers only if the runtime needs the dense mesh; otherwise keep the low cage. Blender lights and cameras are look-dev and do not ship as the XR lighting.
 
-## Common failures
+## Failures
 
 | Symptom | Fix |
 |---|---|
-| Edit Mode missing | A light or camera is selected. Select the mesh. |
-| Delete destroyed the rim | X → Faces, not Vertices. |
-| Subsurf turned the cup into a blob | Ctrl+R near rim and base, or I inset on a single cap. |
-| Rotate orbits the world | Object → Set Origin → Origin to Geometry. |
-| Viewport frozen | Lower viewport subdivision. Keep render level higher. |
-| Export scale wrong | Ctrl+A → Scale. Check metres. |
+| No Edit Mode | A light or camera is selected |
+| Rim deleted | X → Faces, not Vertices |
+| Subsurf blob | Ctrl+R at rim and base, or I on a single cap |
+| Frozen viewport | Lower viewport subdivision |
+| Wrong size in XR | Metres, then Ctrl+A → Scale |

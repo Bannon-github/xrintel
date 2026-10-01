@@ -1,11 +1,11 @@
 ---
 description: "Project-only Blender steps for the vase, low-poly scene, and donut-part-1 mug. Read when the user names one of those exercises."
-connections: [hotkeys, gltf-export]
+connections: [hotkeys, gltf-export, materials-uvs]
 ---
 
 # Projects
 
-Shared navigation, modifiers, and export live in `SKILL.md`. Keys are in [[hotkeys]]. Export is in [[gltf-export]]. These are the steps that differ.
+Shared navigation, modifiers, and export live in `SKILL.md`. Keys are in [[hotkeys]]. Textures are in [[materials-uvs]]. Export is in [[gltf-export]]. These are the steps that differ.
 
 ## Vase (Poole)
 
@@ -16,7 +16,8 @@ Source: https://www.youtube.com/watch?v=Y0DthPSWjVk
 3. Edit Mode. Loop Cut on the upper half and lower half.
 4. Scale vertex rings so the base puffs and the neck shrinks. Orbit while doing it.
 5. Subdivision Surface, then Shade Smooth. Viewport level 1–2, higher render level.
-6. Base Color, move the light, F12. Export with [[gltf-export]] if it is going to a scene.
+6. Base Color, or an image after U → Smart UV Project. See [[materials-uvs]].
+7. Move the light, F12. Export with [[gltf-export]] if it is going to a scene.
 
 ## Low-poly scene (Joey Carlino)
 

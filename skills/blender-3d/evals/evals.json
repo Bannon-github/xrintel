@@ -20,6 +20,11 @@
       "name": "shortcut_lookup",
       "input": "What is the Blender shortcut for loop cut and inset",
       "assertions": ["Reads references/hotkeys.md", "Gives Ctrl+R and I"]
+    },
+    {
+      "name": "texture_uv",
+      "input": "The vase texture is smeared in the WebXR viewer",
+      "assertions": ["Reads references/materials-uvs.md", "Checks UV map and Smart UV Project or seams", "Says procedural nodes do not export"]
     }
   ]
 }

@@ -1,10 +1,11 @@
 ---
 description: "Project-only Blender steps for the vase, low-poly scene, and donut-part-1 mug. Read when the user names one of those exercises."
+connections: [hotkeys, gltf-export]
 ---
 
 # Projects
 
-Shared navigation, modifiers, and export live in `SKILL.md`. These are the steps that differ.
+Shared navigation, modifiers, and export live in `SKILL.md`. Keys are in [[hotkeys]]. Export is in [[gltf-export]]. These are the steps that differ.
 
 ## Vase (Poole)
 
@@ -12,10 +13,10 @@ Source: https://www.youtube.com/watch?v=Y0DthPSWjVk
 
 1. Delete the cube. Add → Mesh → Cylinder.
 2. Optional: drag a vase photo into the viewport as a reference.
-3. Edit Mode. Loop Cut tool (or Ctrl+R) on the upper half and lower half.
-4. Scale vertex rings (S) so the base puffs and the neck shrinks. Orbit while doing it.
+3. Edit Mode. Loop Cut on the upper half and lower half.
+4. Scale vertex rings so the base puffs and the neck shrinks. Orbit while doing it.
 5. Subdivision Surface, then Shade Smooth. Viewport level 1–2, higher render level.
-6. Base Color, move the light, F12.
+6. Base Color, move the light, F12. Export with [[gltf-export]] if it is going to a scene.
 
 ## Low-poly scene (Joey Carlino)
 
@@ -28,6 +29,7 @@ Caption file was rate-limited; middle steps follow the published chapters.
 4. Tree: cylinder trunk, cone or UV sphere canopy, G to stack.
 5. Alt+G / Alt+R / Alt+S clears a bad transform.
 6. N-panel for numeric transforms. One Base Color per part. Eevee to preview, Cycles for the still.
+7. Export the joined prop, not the light or camera. See [[gltf-export]].
 
 ## Mug, donut part 1 (Blender Guru)
 

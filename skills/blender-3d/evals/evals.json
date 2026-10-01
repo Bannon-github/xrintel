@@ -14,7 +14,12 @@
     {
       "name": "webxr_export",
       "input": "I modeled a cup in Blender and need it in a WebXR scene",
-      "assertions": ["Requires metres, apply scale, outliner name, and glTF", "Says Blender lights are look-dev only"]
+      "assertions": ["Reads references/gltf-export.md", "Requires metres, apply scale, glb, and Principled BSDF", "Says not to hand-rotate for Y-up"]
+    },
+    {
+      "name": "shortcut_lookup",
+      "input": "What is the Blender shortcut for loop cut and inset",
+      "assertions": ["Reads references/hotkeys.md", "Gives Ctrl+R and I"]
     }
   ]
 }

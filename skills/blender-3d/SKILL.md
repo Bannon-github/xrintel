@@ -9,27 +9,25 @@ lifecycle: active
 
 Produce one mesh a WebXR scene can load. Menu names drift; if a command is missing, press F3 and search it. Do not paste video transcripts.
 
-Project-only steps: `references/projects.md`.
+## Knowledge graph
+
+Start at `references/INDEX.md` only if the task is not the workflow below.
+
+- Exercise named: `references/projects.md`
+- Shortcut asked: `references/hotkeys.md`
+- Export or a black/huge glTF: `references/gltf-export.md`
 
 ## Workflow
 
 1. Install from https://www.blender.org/download/ if Blender is not open. Dismiss the splash. Default scene is a cube, a light, and a camera.
-2. Navigate before modeling. Middle-mouse drag orbits, scroll zooms, Shift+middle-mouse pans. Top-right gizmos match those (axis, magnifying glass, hand). View → Frame Selected (numpad period) recovers a lost object. Walk mode: View → Navigation → Walk Navigation, or Shift+backtick; left-click keeps the view, right-click cancels.
+2. Navigate before modeling. Middle-mouse drag orbits, scroll zooms, Shift+middle-mouse pans. View → Frame Selected (numpad period) recovers a lost object.
 3. Delete the cube (X). Add a mesh with Shift+A. New objects spawn at the 3D cursor (Shift+right-click to place it).
-4. Tab into Edit Mode only with a mesh selected. Points are vertices, lines are edges, filled polygons are faces. 1/2/3 on the number row switch those modes. A selects all. Left-click confirms a transform, right-click cancels.
-5. Shape with G, R, S. Press X, Y, or Z after the key to lock an axis; Shift+axis excludes it. Ctrl+R adds a loop cut. I insets a face. Shift+D duplicates.
-6. Smooth without destroying the cage. Wrench tab → Subdivision Surface, viewport level 1 or 2. Right-click → Shade Smooth. Put loop cuts near any rim that must stay sharp. Do not Apply the modifier yet.
-7. One material (red sphere tab → New → Base Color). Move the light. Numpad 0 or View → Cameras → Active Camera. Lock Camera to View in the N-panel View tab to frame. F12 renders. Image → Save As.
-8. File → Save As with a trailing number (`prop_01`). Numpad plus in the save dialog bumps it. Do not overwrite the only copy.
-9. Export only after the checks below.
-
-## WebXR export
-
-1. Scene properties → Units → metres.
-2. Object → Set Origin → Origin to Geometry if rotate spins around the world.
-3. Ctrl+A → Scale. Unapplied scale breaks modifiers and glTF.
-4. Rename the object in the outliner. That name is the glTF node.
-5. File → Export → glTF 2.0. Apply modifiers only if the runtime needs the dense mesh; otherwise keep the low cage. Blender lights and cameras are look-dev and do not ship as the XR lighting.
+4. Tab into Edit Mode only with a mesh selected. 1/2/3 on the number row select vertex, edge, face. Left-click confirms a transform, right-click cancels.
+5. Shape with G, R, S. Axis lock is X, Y, or Z after the key. Ctrl+R loop-cuts. I insets. Shift+D duplicates. Full table: `references/hotkeys.md`.
+6. Smooth without destroying the cage. Subdivision Surface, viewport level 1 or 2. Shade Smooth. Loop cuts near any rim that must stay sharp. Do not Apply yet.
+7. One Principled material, Base Color only. Move the light. Frame the camera. F12. Image → Save As.
+8. File → Save As with a trailing number (`prop_01`). Do not overwrite the only copy.
+9. Export with `references/gltf-export.md`. Metres, origin, Ctrl+A → Scale, outliner name, `.glb`, selected objects only.
 
 ## Failures
 
@@ -39,4 +37,5 @@ Project-only steps: `references/projects.md`.
 | Rim deleted | X → Faces, not Vertices |
 | Subsurf blob | Ctrl+R at rim and base, or I on a single cap |
 | Frozen viewport | Lower viewport subdivision |
-| Wrong size in XR | Metres, then Ctrl+A → Scale |
+| Wrong size in XR | Metres, then Ctrl+A → Scale. See `references/gltf-export.md` |
+| Black mesh in the viewer | Material was not Principled, or the texture was not saved |

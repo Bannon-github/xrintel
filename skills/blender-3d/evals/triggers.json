@@ -1,0 +1,10 @@
+{
+  "skill": "blender-3d",
+  "test_cases": [
+    {"input": "Teach me Blender edit mode and modifiers", "should_trigger": true},
+    {"input": "Step by step donut mug in Blender", "should_trigger": true},
+    {"input": "How do I render a vase in Blender", "should_trigger": true},
+    {"input": "Write a Python Flask login route", "should_trigger": false},
+    {"input": "Explain the Blender movie franchise", "should_trigger": false}
+  ]
+}

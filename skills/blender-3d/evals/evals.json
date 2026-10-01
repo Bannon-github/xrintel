@@ -1,0 +1,20 @@
+{
+  "skill": "blender-3d",
+  "test_cases": [
+    {
+      "name": "vase_session",
+      "input": "Walk me through making a simple vase in Blender from scratch",
+      "assertions": ["Uses the Poole lesson order", "Includes cylinder, edit mode, loop cuts, subdivision surface, shade smooth, material, F12", "Does not dump a verbatim video transcript"]
+    },
+    {
+      "name": "mug_modifiers",
+      "input": "How do I make the coffee mug from the Blender Guru donut part 1",
+      "assertions": ["Deletes the top face only", "Adds Solidify and Subdivision Surface without applying", "Uses Ctrl+R loop cuts and I inset", "Saves with a version number"]
+    },
+    {
+      "name": "webxr_export",
+      "input": "I modeled a cup in Blender and need it in a WebXR scene",
+      "assertions": ["Mentions metres, apply scale, outliner names, and glTF", "Warns that Blender lights do not ship as the runtime lighting"]
+    }
+  ]
+}

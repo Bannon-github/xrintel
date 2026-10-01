@@ -7,7 +7,9 @@ The Blender skill is an MCP server, not a Blender script and not a tutorial. It 
 
 - Skill: [skills/blender-3d/SKILL.md](skills/blender-3d/SKILL.md)
 - Server: [skills/blender-3d/mcp/server.py](skills/blender-3d/mcp/server.py)
-- Tools: `blender_route`, `blender_doc`, `blender_list`
+- Tools: `blender_route`, `blender_doc`, `blender_list`, `blender_checklist`
+
+`blender_route` returns every matching document, not the first hit. `blender_checklist` is the gate before an agent calls a prop done.
 
 ```json
 {

@@ -15,4 +15,4 @@ Connect stdio:
 }
 ```
 
-Install `fastmcp` first (`pip install -r skills/blender-3d/mcp/requirements.txt`). Call `blender_route` with the task before answering. If the MCP is not connected, read `skills/blender-3d/SKILL.md` instead.
+Install `fastmcp` first (`pip install -r skills/blender-3d/mcp/requirements.txt`). Call `blender_route` with the task before answering. Read every document it returns. Call `blender_checklist` and answer every line before saying a prop is done. If the MCP is not connected, read `skills/blender-3d/SKILL.md` instead.
